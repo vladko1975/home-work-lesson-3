@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Working with tables, lists and forms</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+       <table border="5">
+           <caption>Some parameters</caption>
+           <tr>
+               <th>1</th>
+               <th>2</th>
+               <th>3</th>
+               <th>4</th>
+               <th>5</th>
+               <th>6</th>
+           </tr>
+           <tr>
+               <th colspan="2">1</th>
+               <th>2</th>
+               <th colspan="3">3</th>
+           </tr>
+           <tr>
+               <td colspan="4">1</td>
+               <td rowspan="3">2</td>
+               <td>3</td>
+           </tr>
+           <tr>
+               <td rowspan="2">1</td>
+               <td>2</td>
+               <td rowspan="2" colspan="2">3</td>
+               <td>4</td>
+           </tr>
+           <tr>
+               <td>1</td>
+               <td>2</td>
+           </tr>
+       </table>
+        <ul><!-- Animals -->
+           <li>Lion</li>
+           <li>Wolf</li>
+           <li type="square">Bear</li>
+           <li type="square">Fox</li>
+           <li type="circle">Goat</li>
+           <li type="circle">Duck</li>
+        </ul>
+        <ol><!-- Animals -->
+           <li type="1">Lion</li>
+           <li type="1">Wolf</li>
+           <li type="A">Bear</li>
+           <li type="A">Fox</li>
+           <li type="a">Goat</li>
+           <li type="a">Duck</li></ol>
+        <ol><!-- Animals -->
+           <li value="11">Lion</li>
+           <li>Wolf</li>
+           <li>Bear</li>
+           <li type="I">Fox</li>
+           <li>Goat</li>
+           <li type="i">Duck</li>
+        </ol>
+        <hr>
+        <form method="GET" name="Registration foam" action="">
+            <fieldset>
+            <h1>Registration</h1>
+            <fieldset><br>
+                <label for="nik">Nik:  </label>
+                <input id="nik" type="text" required autofocus title="Sample: Abr@C@d@br@$123">
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="FeMale"> FeMale<br><br>
+                <label for="name">Name:  </label>
+                <input id="name" type="text" required pattern="[A-Za-z]{2,}" title="Sample: Aa...Zz">
+                <label for="surname"> SurName:</label>
+                <input id="suname" type="text" required pattern="^[A-Za-z]{2,}" title="Sample: Aa...Zz"><br><br>
+                <label for="birthday" >Your birthday:</label>
+                <input id="birthday" type="date" required title="Your birthday Date"><br>
+            </fieldset><br>
+            <h3>Adress</h3>
+            <fieldset><br>
+                <label for="email">Email:</label>
+                <input id="email" type="email" required title="Sample: a...z123@domain.name">
+                <label for="сity"> Сity:  </label>
+                <input id="city" type="text" required pattern="[A-Za-z]{2,}" title="Sample: Lviv"><br><br>
+                <label for="contry"> Contry:  </label>
+                <select name="contry">
+                  <option value="ukaine">Ukraine</option>
+                  <option value="poland">Poland</option>
+                  <option value="germany">Germany</option>
+                  <option value="spane">Spain</option>
+                  <option value="usa">USA</option>
+                </select>
+                <label for="tel">     Phone nomber:</label>
+                <input id="tel" type="tel" required title="+380121234567">
+            </fieldset><br>  
+            <label for="password">Password:</label>
+            <input id="password" type="password" required title="Sample: Aa...Zz">
+            <label for="pasport">Pasport:</label>
+            <input id="pasport" type="text" required pattern="[A-Z]{2}[0-9]{6}" title="Sample: AA 123456">    
+            <br><br> 
+            <input id="agry" type="checkbox" required>
+            <label for="agry">Select, if you would like to receive newsletters.</label>
+            <input type="reset" value="Reset form"/>
+            <br><br> 
+            <input type="submit" value="Submit"/>
+            </fieldset><br>
+        </form>
+    </body>
+</html>
